@@ -12,18 +12,18 @@ export default async function Home() {
   return (
     <div className="">
       <Banner
-        banner_title={data.banner_title}
-        banner_image={data.banner_image}
+        banner_title={data.banner_title ?? ""}
+        banner_image={data.banner_image ?? ""}
       />
       <About
-        about_title={data.about_title}
-        about_description={data.about_description}
-        about_images={data.about_images}
+        about_title={data.about_title ?? ""}
+        about_description={data.about_description ?? ""}
+        about_images={data.about_images ?? []}
       />
-      <Founder founders={data.founders} />
-      <Program programs={data.programs} />
-      <Marquee text_slider={data.text_slider} />
-      <Faq faqs={data.xschool_faq} />
+      <Founder founders={data.founders ?? []} />
+      <Program programs={data.programs ?? []} />
+      <Marquee text_slider={data.text_slider ?? ""} />
+      <Faq faqs={data.xschool_faq ?? []} />
     </div>
   );
 }
