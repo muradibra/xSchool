@@ -1,6 +1,6 @@
 export const getData = async () => {
   try {
-    const res = await fetch(process.env.NEXT_PUBLIC_API_URL!, {
+    const res = await fetch(process.env.API_URL!, {
       cache: "no-store",
     });
     if (!res.ok) throw new Error("Failed to fetch");
