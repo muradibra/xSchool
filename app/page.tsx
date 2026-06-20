@@ -9,6 +9,10 @@ import { Faq } from "@/components/FAQ";
 export default async function Home() {
   const data = await getData();
 
+  if (!data) {
+    throw new Error("Failed to load page data");
+  }
+
   return (
     <div className="">
       <Banner
